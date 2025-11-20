@@ -4,15 +4,22 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
-  box-shadow: var(--shadow);
+  padding: 18px 22px;
+  box-shadow: 0 20px 48px -28px rgba(1, 31, 91, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
   position: sticky !important;
   top: 0;
   z-index: 10 !important;
 }
 
+header.background {
+  background: linear-gradient(120deg, rgba(1, 31, 91, 0.96), rgba(1, 31, 91, 0.88));
+  color: #f2f4fb;
+}
+
 header a {
-  color: var(--text);
+  color: #f2f4fb;
   text-decoration: none;
 }
 
@@ -64,7 +71,7 @@ header a {
   width: 30px;
   height: 30px;
   margin: 0;
-  color: var(--text);
+  color: #f2f4fb;
   appearance: none;
   transition: background var(--transition);
 }
@@ -74,7 +81,7 @@ header a {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: var(--text);
+  color: inherit;
   font-size: 15px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -96,11 +103,14 @@ nav {
 }
 
 nav > a {
-  padding: 5px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background var(--transition), color var(--transition);
 }
 
 nav > a:hover {
-  color: var(--primary);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 @media (max-width: 700px) {

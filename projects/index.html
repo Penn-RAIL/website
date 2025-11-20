@@ -231,6 +231,10 @@
   
 
   
+    <link href="/rail-lab-website/_styles/page-refresh.css" rel="stylesheet">
+  
+
+  
     <link href="/rail-lab-website/_styles/paragraph.css" rel="stylesheet">
   
 
@@ -413,6 +417,12 @@
       
     
       
+        <a href="/rail-lab-website/blog/" data-tooltip="Musings and miscellany">
+          Blog
+        </a>
+      
+    
+      
         <a href="/rail-lab-website/contact/" data-tooltip="Email, address, and location">
           Contact
         </a>
@@ -445,81 +455,54 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="projects">
-<i class="icon fa-solid fa-wrench"></i>Projects</h1>
+    <div class="page-hero">
+  <div class="hero-content">
+    <p class="eyebrow">Penn Radiology · Projects</p>
+    <h1>Clinical AI built for deployment</h1>
+    <p class="lead">
+      We design, test, and scale solutions that improve radiology workflows across Penn Medicine. Each build balances patient
+      safety, clinician usability, and measurable impact.
+    </p>
+    <div class="hero-actions">
+      
 
-<p>Discover how RAIL at the University of Pennsylvania is transforming medical imaging through innovative AI-powered projects.</p>
-
-<!-- 
 
 
-  <div
-    class="tags"
-    
-    
-      data-link="/rail-lab-website/projects/"
-    
-  >
-    
-      <a
-        href="/projects/?search=&quot;tag: publication&quot;"
-        class="tag"
-        data-tooltip="Show items with the tag &quot;publication&quot;"
-      >
-        publication
-      </a>
-    
-      <a
-        href="/projects/?search=&quot;tag: resource&quot;"
-        class="tag"
-        data-tooltip="Show items with the tag &quot;resource&quot;"
-      >
-        resource
-      </a>
-    
-      <a
-        href="/projects/?search=&quot;tag: website&quot;"
-        class="tag"
-        data-tooltip="Show items with the tag &quot;website&quot;"
-      >
-        website
-      </a>
-    
+  <div class="button-wrapper">
+    <a class="button" href="/rail-lab-website/contact" data-style="" aria-label="fa-solid fa-handshake">
+      <i class="icon fa-solid fa-handshake"></i>
+      
+        <span>Collaborate with us</span>
+      
+    </a>
   </div>
 
- -->
 
-<!-- <div class="search-info"></div>
- -->
-
-<!--
-  </section>
-
-  
-  
-  
-
-  <section
-    class="background"
-    data-size="page"
-    
-    
-  >
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<!-- ## Featured -->
-
-<!-- 
+      
 
 
 
+  <div class="button-wrapper">
+    <a class="button" href="/rail-lab-website/research" data-style="bare" aria-label="fa-solid fa-book-open">
+      <i class="icon fa-solid fa-book-open"></i>
+      
+        <span>See the science</span>
+      
+    </a>
+  </div>
 
 
- -->
+    </div>
+  </div>
+  <div class="hero-panel">
+    <h3>What we deliver</h3>
+    <ul>
+      <li>Decision support and triage systems validated with radiologists.</li>
+      <li>Educational tools that help clinicians and patients understand AI.</li>
+      <li>Monitoring dashboards that keep performance and equity in view.</li>
+    </ul>
+  </div>
+</div>
   </section>
 
   
@@ -533,7 +516,34 @@
   <size></size>
 -->
 
-<!-- ## More -->
+<div class="card-stack">
+  <div class="card-tile">
+    <h3>Deployment ready</h3>
+    <p>Built with governance, quality, and IT partners to meet Penn Medicine standards.</p>
+  </div>
+  <div class="card-tile">
+    <h3>Human-centered</h3>
+    <p>Interfaces and alerts designed with clinician feedback to improve adoption and trust.</p>
+  </div>
+  <div class="card-tile">
+    <h3>Measurable impact</h3>
+    <p>Each initiative tracks clear clinical, operational, or educational outcomes.</p>
+  </div>
+</div>
+  </section>
+
+  
+  
+  
+
+  <section class="background" data-size="page">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
+
+<h2 id="active-projects">Active projects</h2>
 
 <div class="card" data-style="small">
   <a href="https://pennrad-ghost-lab.github.io/chameleon/" aria-label="Chameleon" class="card-image">
@@ -582,17 +592,20 @@
 
 
 <footer class="background" style="--image: url('/rail-lab-website/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="/rail-lab-website/images/upenn-logo.svg" alt="University of Pennsylvania" class="footer-logo">
+      <div>
+        <p class="footer-title">Radiology AI Implementation Lab</p>
+        <p class="footer-subtitle">Department of Radiology · University of Pennsylvania</p>
+      </div>
     </div>
-  -->
 
-  <div>
-    
+    <div class="footer-links">
       
-      
-      
+        
+        
+        
 
 
 
@@ -604,10 +617,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -619,10 +632,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -634,19 +647,24 @@
   </div>
 
 
-    
-  </div>
+      
+    </div>
 
-  <div>
-    © 2025
-    Radiology AI Implementation Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
+    <div class="footer-meta">
+      <span>© 2025 Radiology AI Implementation Lab</span>
+      <span class="footer-template">
+        Built with
+        <a href="https://github.com/greenelab/lab-website-template">
+          Lab Website Template
+        </a>
+      </span>
+    </div>
 
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+    <label class="footer-toggle">
+      <input type="checkbox" class="dark-toggle" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      <span>Dark mode</span>
+    </label>
+  </div>
 </footer>
 
     <!-- third party scripts -->

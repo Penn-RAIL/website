@@ -231,6 +231,10 @@
   
 
   
+    <link href="/rail-lab-website/_styles/page-refresh.css" rel="stylesheet">
+  
+
+  
     <link href="/rail-lab-website/_styles/paragraph.css" rel="stylesheet">
   
 
@@ -357,6 +361,12 @@
       
     
       
+        <a href="/rail-lab-website/blog/" data-tooltip="Musings and miscellany">
+          Blog
+        </a>
+      
+    
+      
         <a href="/rail-lab-website/contact/" data-tooltip="Email, address, and location">
           Contact
         </a>
@@ -448,17 +458,20 @@
 
 
 <footer class="background" style="--image: url('/rail-lab-website/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="/rail-lab-website/images/upenn-logo.svg" alt="University of Pennsylvania" class="footer-logo">
+      <div>
+        <p class="footer-title">Radiology AI Implementation Lab</p>
+        <p class="footer-subtitle">Department of Radiology · University of Pennsylvania</p>
+      </div>
     </div>
-  -->
 
-  <div>
-    
+    <div class="footer-links">
       
-      
-      
+        
+        
+        
 
 
 
@@ -470,10 +483,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -485,10 +498,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -500,19 +513,24 @@
   </div>
 
 
-    
-  </div>
+      
+    </div>
 
-  <div>
-    © 2025
-    Radiology AI Implementation Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
+    <div class="footer-meta">
+      <span>© 2025 Radiology AI Implementation Lab</span>
+      <span class="footer-template">
+        Built with
+        <a href="https://github.com/greenelab/lab-website-template">
+          Lab Website Template
+        </a>
+      </span>
+    </div>
 
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+    <label class="footer-toggle">
+      <input type="checkbox" class="dark-toggle" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      <span>Dark mode</span>
+    </label>
+  </div>
 </footer>
 
     <!-- third party scripts -->

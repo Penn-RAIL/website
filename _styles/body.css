@@ -8,7 +8,7 @@ body {
   color: var(--text);
   font-family: var(--body);
   font-size: 1.3rem;
-  text-align: center;
+  text-align: left;
   line-height: var(--compact);
 }
 

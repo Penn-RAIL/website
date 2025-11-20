@@ -231,6 +231,10 @@
   
 
   
+    <link href="/rail-lab-website/_styles/page-refresh.css" rel="stylesheet">
+  
+
+  
     <link href="/rail-lab-website/_styles/paragraph.css" rel="stylesheet">
   
 
@@ -413,6 +417,12 @@
       
     
       
+        <a href="/rail-lab-website/blog/" data-tooltip="Musings and miscellany">
+          Blog
+        </a>
+      
+    
+      
         <a href="/rail-lab-website/contact/" data-tooltip="Email, address, and location">
           Contact
         </a>
@@ -445,10 +455,51 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="team">
-<i class="icon fa-solid fa-users"></i>Team</h1>
+    <div class="page-hero">
+  <div class="hero-content">
+    <p class="eyebrow">Penn Radiology · Team</p>
+    <h1>People shaping the future of radiology AI</h1>
+    <p class="lead">
+      RAIL brings together faculty, engineers, trainees, and collaborators from across Penn Medicine. We balance clinical depth
+      with technical rigor to deliver tools that clinicians trust and patients feel good about.
+    </p>
+  </div>
+  <div class="hero-panel">
+    <h3>How we work</h3>
+    <ul>
+      <li>Co-production with radiologists, technologists, and IT partners.</li>
+      <li>Mentorship for students, residents, and fellows exploring AI.</li>
+      <li>Inclusive culture centered on learning and shared wins.</li>
+    </ul>
+  </div>
+</div>
+  </section>
 
-<p>Meet the team behind RAIL’s cutting-edge research and projects.</p>
+  
+  
+  
+
+  <section class="background" data-size="page">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
+
+<div class="card-stack">
+  <div class="card-tile">
+    <h3>Faculty leadership</h3>
+    <p>Guiding strategy, governance, and mentorship across clinical and technical teams.</p>
+  </div>
+  <div class="card-tile">
+    <h3>Engineering &amp; data science</h3>
+    <p>Building, validating, and hardening AI solutions for real-world imaging workflows.</p>
+  </div>
+  <div class="card-tile">
+    <h3>Trainees &amp; collaborators</h3>
+    <p>Students, residents, and partners who expand our research and implementation capacity.</p>
+  </div>
+</div>
   </section>
 
   
@@ -673,83 +724,6 @@
 
   
 </div>
-
-<!--
-  </section>
-
-  
-  
-  
-
-  <section
-    class="background"
-    data-size="2"
-    
-      data-dark="true"
-    
-    
-      style="--image: url('/rail-lab-website/images/background.jpg')"
-    
-  >
-    <!--
-  <background>images/background.jpg</background>
-  <dark>true</dark>
-  <size>2</size>
--->
-
-<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<!--  -->
-
-<!-- <div class="grid" data-style="square">
-  
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/rail-lab-website/images/photo.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/rail-lab-website/images/fallback.svg'; this.onerror = null;" />
-  </a>
-  
-</figure>
-
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/rail-lab-website/images/photo.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/rail-lab-website/images/fallback.svg'; this.onerror = null;" />
-  </a>
-  
-</figure>
-
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/rail-lab-website/images/photo.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/rail-lab-website/images/fallback.svg'; this.onerror = null;" />
-  </a>
-  
-</figure>
-
-
-</div>
- -->
   </section>
 
 
@@ -758,17 +732,20 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. --
 
 
 <footer class="background" style="--image: url('/rail-lab-website/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="/rail-lab-website/images/upenn-logo.svg" alt="University of Pennsylvania" class="footer-logo">
+      <div>
+        <p class="footer-title">Radiology AI Implementation Lab</p>
+        <p class="footer-subtitle">Department of Radiology · University of Pennsylvania</p>
+      </div>
     </div>
-  -->
 
-  <div>
-    
+    <div class="footer-links">
       
-      
-      
+        
+        
+        
 
 
 
@@ -780,10 +757,10 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. --
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -795,10 +772,10 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. --
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -810,19 +787,24 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. --
   </div>
 
 
-    
-  </div>
+      
+    </div>
 
-  <div>
-    © 2025
-    Radiology AI Implementation Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
+    <div class="footer-meta">
+      <span>© 2025 Radiology AI Implementation Lab</span>
+      <span class="footer-template">
+        Built with
+        <a href="https://github.com/greenelab/lab-website-template">
+          Lab Website Template
+        </a>
+      </span>
+    </div>
 
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+    <label class="footer-toggle">
+      <input type="checkbox" class="dark-toggle" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      <span>Dark mode</span>
+    </label>
+  </div>
 </footer>
 
     <!-- third party scripts -->

@@ -231,6 +231,10 @@
   
 
   
+    <link href="/rail-lab-website/_styles/page-refresh.css" rel="stylesheet">
+  
+
+  
     <link href="/rail-lab-website/_styles/paragraph.css" rel="stylesheet">
   
 
@@ -413,6 +417,12 @@
       
     
       
+        <a href="/rail-lab-website/blog/" data-tooltip="Musings and miscellany">
+          Blog
+        </a>
+      
+    
+      
         <a href="/rail-lab-website/contact/" data-tooltip="Email, address, and location">
           Contact
         </a>
@@ -445,10 +455,37 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="lab-socials">
-<i class="icon fa-solid fa-images"></i>Lab Socials</h1>
+    <div class="page-hero">
+  <div class="hero-content">
+    <p class="eyebrow">Penn Radiology · Community</p>
+    <h1>Moments from the RAIL team</h1>
+    <p class="lead">Explore photos from talks, milestones, and gatherings across Penn Medicine.</p>
+    <div class="hero-actions">
+      
 
-<p>Explore photos from the RAIL lab – see our work and our people.</p>
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/rail-lab-website/contact" data-style="" aria-label="fa-solid fa-microphone">
+      <i class="icon fa-solid fa-microphone"></i>
+      
+        <span>Invite us to speak</span>
+      
+    </a>
+  </div>
+
+
+    </div>
+  </div>
+  <div class="hero-panel">
+    <h3>Highlights</h3>
+    <ul>
+      <li>Conference presentations and awards.</li>
+      <li>Team celebrations and community events.</li>
+      <li>Teaching moments with residents and students.</li>
+    </ul>
+  </div>
+</div>
   </section>
 
   
@@ -462,8 +499,7 @@
   <size></size>
 -->
 
-<div class="gallery">
-
+<div class="media-gallery">
   <figure>
     
     
@@ -490,96 +526,7 @@
     </a>
     <figcaption>Dr. Cook receiving the prestigious Fellow of the American College of Radiology (FACR) title</figcaption>
   </figure>
-
-
-
-  <!-- <figure>
-    
-    
-    <a href="/rail-lab-website/images/rsna2024.jpg" data-lightbox="social-gallery" data-title="RAIL Team at RSNA 2024">
-      <img src="/rail-lab-website/images/rsna2024.jpg" alt="RAIL Team at RSNA 2024">
-    </a>
-    <figcaption>RAIL Team at RSNA 2024</figcaption>
-  </figure>
-
-  <figure>
-    
-    
-    <a href="/rail-lab-website/images/rsna2024.jpg" data-lightbox="social-gallery" data-title="RAIL Team at RSNA 2024">
-      <img src="/rail-lab-website/images/rsna2024.jpg" alt="RAIL Team at RSNA 2024">
-    </a>
-    <figcaption>RAIL Team at RSNA 2024</figcaption>
-  </figure>
-
-  <figure>
-    
-    
-    <a href="/rail-lab-website/images/rsna2024.jpg" data-lightbox="social-gallery" data-title="RAIL Team at RSNA 2024">
-      <img src="/rail-lab-website/images/rsna2024.jpg" alt="RAIL Team at RSNA 2024">
-    </a>
-    <figcaption>RAIL Team at RSNA 2024</figcaption>
-  </figure>
-
-  <figure>
-    
-    
-    <a href="/rail-lab-website/images/rsna2024.jpg" data-lightbox="social-gallery" data-title="RAIL Team at RSNA 2024">
-      <img src="/rail-lab-website/images/rsna2024.jpg" alt="RAIL Team at RSNA 2024">
-    </a>
-    <figcaption>RAIL Team at RSNA 2024</figcaption>
-  </figure> -->
-
 </div>
-
-<style>
-/* Updated gallery styling */
-.gallery {
-  display: grid;
-  /* Default: 1 column for small screens */
-  grid-template-columns: 1fr;
-  gap: 1.5rem; /* Spacing between images */
-  margin-top: 2rem;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Medium screens: 2 columns */
-@media (min-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Large screens: 3 columns */
-@media (min-width: 992px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.gallery figure {
-  margin: 0; /* Remove default figure margin */
-  text-align: center;
-}
-
-.gallery img {
-  width: 100%; /* Make image fill the grid column */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove extra space below image */
-  border: 1px solid var(--light-gray); /* Optional border */
-  border-radius: var(--rounded); /* Use theme rounding */
-}
-
-.gallery figcaption {
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  color: var(--black);
-}
-</style>
   </section>
 
 
@@ -588,17 +535,20 @@
 
 
 <footer class="background" style="--image: url('/rail-lab-website/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="/rail-lab-website/images/upenn-logo.svg" alt="University of Pennsylvania" class="footer-logo">
+      <div>
+        <p class="footer-title">Radiology AI Implementation Lab</p>
+        <p class="footer-subtitle">Department of Radiology · University of Pennsylvania</p>
+      </div>
     </div>
-  -->
 
-  <div>
-    
+    <div class="footer-links">
       
-      
-      
+        
+        
+        
 
 
 
@@ -610,10 +560,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -625,10 +575,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -640,19 +590,24 @@
   </div>
 
 
-    
-  </div>
+      
+    </div>
 
-  <div>
-    © 2025
-    Radiology AI Implementation Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
+    <div class="footer-meta">
+      <span>© 2025 Radiology AI Implementation Lab</span>
+      <span class="footer-template">
+        Built with
+        <a href="https://github.com/greenelab/lab-website-template">
+          Lab Website Template
+        </a>
+      </span>
+    </div>
 
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+    <label class="footer-toggle">
+      <input type="checkbox" class="dark-toggle" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      <span>Dark mode</span>
+    </label>
+  </div>
 </footer>
 
     <!-- third party scripts -->

@@ -66,10 +66,10 @@
 
   <meta name="author" content="john-doe">
   <meta property="og:type" content="article">
-  <meta property="og:updated_time" content="2025-11-20T04:36:27+00:00">
+  <meta property="og:updated_time" content="2025-11-20T05:14:01+00:00">
   <meta property="article:published_time" content="2023-02-23T00:00:00+00:00">
-  <meta property="article:modified_time" content="2025-11-20T04:36:27+00:00">
-  <meta name="revised" content="2025-11-20T04:36:27+00:00">
+  <meta property="article:modified_time" content="2025-11-20T05:14:01+00:00">
+  <meta name="revised" content="2025-11-20T05:14:01+00:00">
 
 
 <script type="application/ld+json">
@@ -79,7 +79,7 @@
       "@type": "BlogPosting",
       "author": { "@type": "Person", "name": "Example post 3" },
       "datePublished": "2023-02-23T00:00:00+00:00",
-      "dateModified": "2025-11-20T04:36:27+00:00",
+      "dateModified": "2025-11-20T05:14:01+00:00",
     
     "name": "Example post 3",
     "description": "University of Pennsylvania. The Radiology AI Implementation Lab (RAIL) at the Perelman School of Medicine, led by Dr. Tessa Cook, is dedicated to advancing the real-world integration of artificial intelligence into radiology. Our work spans clinical workflow optimization, innovative medical education, and AI-driven tools to enhance patient-centered care.",
@@ -239,6 +239,10 @@
   
 
   
+    <link href="/rail-lab-website/_styles/page-refresh.css" rel="stylesheet">
+  
+
+  
     <link href="/rail-lab-website/_styles/paragraph.css" rel="stylesheet">
   
 
@@ -361,6 +365,12 @@
       
         <a href="/rail-lab-website/team/" data-tooltip="About our team">
           Team
+        </a>
+      
+    
+      
+        <a href="/rail-lab-website/blog/" data-tooltip="Musings and miscellany">
+          Blog
         </a>
       
     
@@ -503,17 +513,20 @@
 
 
 <footer class="background" style="--image: url('/rail-lab-website/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="/rail-lab-website/images/upenn-logo.svg" alt="University of Pennsylvania" class="footer-logo">
+      <div>
+        <p class="footer-title">Radiology AI Implementation Lab</p>
+        <p class="footer-subtitle">Department of Radiology · University of Pennsylvania</p>
+      </div>
     </div>
-  -->
 
-  <div>
-    
+    <div class="footer-links">
       
-      
-      
+        
+        
+        
 
 
 
@@ -525,10 +538,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -540,10 +553,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -555,19 +568,24 @@
   </div>
 
 
-    
-  </div>
+      
+    </div>
 
-  <div>
-    © 2025
-    Radiology AI Implementation Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
+    <div class="footer-meta">
+      <span>© 2025 Radiology AI Implementation Lab</span>
+      <span class="footer-template">
+        Built with
+        <a href="https://github.com/greenelab/lab-website-template">
+          Lab Website Template
+        </a>
+      </span>
+    </div>
 
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+    <label class="footer-toggle">
+      <input type="checkbox" class="dark-toggle" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      <span>Dark mode</span>
+    </label>
+  </div>
 </footer>
 
     <!-- third party scripts -->

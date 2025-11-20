@@ -231,6 +231,10 @@
   
 
   
+    <link href="/rail-lab-website/_styles/page-refresh.css" rel="stylesheet">
+  
+
+  
     <link href="/rail-lab-website/_styles/paragraph.css" rel="stylesheet">
   
 
@@ -413,6 +417,12 @@
       
     
       
+        <a href="/rail-lab-website/blog/" data-tooltip="Musings and miscellany">
+          Blog
+        </a>
+      
+    
+      
         <a href="/rail-lab-website/contact/" data-tooltip="Email, address, and location">
           Contact
         </a>
@@ -445,10 +455,56 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="research">
-<i class="icon fa-solid fa-microscope"></i>Research</h1>
+    <div class="page-hero">
+  <div class="hero-content">
+    <p class="eyebrow">Penn Radiology · Research</p>
+    <h1>Evidence that strengthens clinical AI</h1>
+    <p class="lead">
+      Our scholarship spans clinical validation, fairness, interpretability, and implementation science. We publish to share what
+      works, what does not, and how to responsibly bring AI into radiology practice across Penn Medicine.
+    </p>
+    <div class="hero-actions">
+      
 
-<p>Explore how RAIL’s research is pushing the boundaries of artificial intelligence to improve medical imaging, diagnosis, and patient outcomes.</p>
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/rail-lab-website/contact" data-style="" aria-label="fa-solid fa-handshake">
+      <i class="icon fa-solid fa-handshake"></i>
+      
+        <span>Partner on a study</span>
+      
+    </a>
+  </div>
+
+
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/rail-lab-website/projects" data-style="bare" aria-label="fa-solid fa-diagram-project">
+      <i class="icon fa-solid fa-diagram-project"></i>
+      
+        <span>See related projects</span>
+      
+    </a>
+  </div>
+
+
+    </div>
+  </div>
+  <div class="hero-panel">
+    <h3>Focus areas</h3>
+    <p>We prioritize rigorous, patient-first evidence that is reproducible and transparent.</p>
+    <div class="badge-list">
+      <span><i class="fa-solid fa-microscope"></i> Clinical validation</span>
+      <span><i class="fa-solid fa-scale-balanced"></i> Fairness</span>
+      <span><i class="fa-solid fa-eye"></i> Interpretability</span>
+      <span><i class="fa-solid fa-shield-heart"></i> Safety</span>
+    </div>
+  </div>
+</div>
   </section>
 
   
@@ -462,7 +518,11 @@
   <size></size>
 -->
 
-<h2 id="highlighted">Highlighted</h2>
+<div class="card-stack">
+  <div class="card-tile">
+    <h3>Highlighted scholarship</h3>
+    <p>Spotlighting work that shapes how we evaluate and deliver AI in radiology.</p>
+    
 
 <div class="citation-container">
   <div class="citation">
@@ -503,6 +563,17 @@
     </div>
   </div>
 </div>
+
+  </div>
+  <div class="card-tile">
+    <h3>Reproducible by design</h3>
+    <p>Datasets, benchmarks, and code released to accelerate trustworthy imaging AI for everyone.</p>
+    <div class="note-grid">
+      <div class="note">Transparent reporting aligned with Penn Medicine standards.</div>
+      <div class="note">Human factors research that centers clinicians and patients.</div>
+    </div>
+  </div>
+</div>
   </section>
 
   
@@ -516,7 +587,7 @@
   <size></size>
 -->
 
-<h2 id="all">All</h2>
+<h2 id="all-research">All research</h2>
 
 <div class="search-box">
   <input type="text" class="search-input" oninput="onSearchInput(this)" placeholder="Search items on this page">
@@ -1020,17 +1091,20 @@
 
 
 <footer class="background" style="--image: url('/rail-lab-website/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="/rail-lab-website/images/upenn-logo.svg" alt="University of Pennsylvania" class="footer-logo">
+      <div>
+        <p class="footer-title">Radiology AI Implementation Lab</p>
+        <p class="footer-subtitle">Department of Radiology · University of Pennsylvania</p>
+      </div>
     </div>
-  -->
 
-  <div>
-    
+    <div class="footer-links">
       
-      
-      
+        
+        
+        
 
 
 
@@ -1042,10 +1116,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -1057,10 +1131,10 @@
   </div>
 
 
-    
       
-      
-      
+        
+        
+        
 
 
 
@@ -1072,19 +1146,24 @@
   </div>
 
 
-    
-  </div>
+      
+    </div>
 
-  <div>
-    © 2025
-    Radiology AI Implementation Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
+    <div class="footer-meta">
+      <span>© 2025 Radiology AI Implementation Lab</span>
+      <span class="footer-template">
+        Built with
+        <a href="https://github.com/greenelab/lab-website-template">
+          Lab Website Template
+        </a>
+      </span>
+    </div>
 
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+    <label class="footer-toggle">
+      <input type="checkbox" class="dark-toggle" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      <span>Dark mode</span>
+    </label>
+  </div>
 </footer>
 
     <!-- third party scripts -->
