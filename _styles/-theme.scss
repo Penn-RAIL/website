@@ -3,26 +3,26 @@
 
 // colors
 [data-dark="false"] {
-  --primary: #0795d9;
-  --secondary: #7dd3fc;
-  --text: #000000;
-  --background: #ffffff;
-  --background-alt: #fafafa;
-  --light-gray: #e0e0e0;
-  --gray: #808080;
-  --dark-gray: #404040;
-  --overlay: #00000020;
+  --primary: #011f5b; // Penn blue
+  --secondary: #990000; // Penn red
+  --text: #0d1838;
+  --background: #f6f7fb;
+  --background-alt: #ffffff;
+  --light-gray: #d7dce7;
+  --gray: #7c869f;
+  --dark-gray: #3a4560;
+  --overlay: #0d183820;
 }
 [data-dark="true"] {
-  --primary: #0795d9;
-  --secondary: #075985;
-  --text: #ffffff;
-  --background: #181818;
-  --background-alt: #1c1c1c;
-  --light-gray: #404040;
-  --gray: #808080;
-  --dark-gray: #b0b0b0;
-  --overlay: #ffffff10;
+  --primary: #4d6aa6;
+  --secondary: #d86161;
+  --text: #e8ecf7;
+  --background: #0b1026;
+  --background-alt: #111833;
+  --light-gray: #2b3250;
+  --gray: #8f99b5;
+  --dark-gray: #cbd4eb;
+  --overlay: #e8ecf710;
 }
 
 :root {

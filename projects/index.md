@@ -5,23 +5,48 @@ nav:
   tooltip: Software, datasets, and more
 ---
 
-# {% include icon.html icon="fa-solid fa-wrench" %}Projects
-
-Discover how RAIL at the University of Pennsylvania is transforming medical imaging through innovative AI-powered projects.
-
-
-<!-- {% include tags.html tags="publication, resource, website" %} -->
-
-<!-- {% include search-info.html %} -->
-
-<!-- {% include section.html %} 
-
-<!-- ## Featured -->
-
-<!-- {% include list.html component="card" data="projects" filter="group == 'featured'" %} -->
+<div class="page-hero">
+  <div class="hero-content">
+    <p class="eyebrow">Penn Radiology · Projects</p>
+    <h1>Clinical AI built for deployment</h1>
+    <p class="lead">
+      We design, test, and scale solutions that improve radiology workflows across Penn Medicine. Each build balances patient
+      safety, clinician usability, and measurable impact.
+    </p>
+    <div class="hero-actions">
+      {% include button.html link="contact" text="Collaborate with us" icon="fa-solid fa-handshake" %}
+      {% include button.html link="research" text="See the science" icon="fa-solid fa-book-open" style="bare" %}
+    </div>
+  </div>
+  <div class="hero-panel">
+    <h3>What we deliver</h3>
+    <ul>
+      <li>Decision support and triage systems validated with radiologists.</li>
+      <li>Educational tools that help clinicians and patients understand AI.</li>
+      <li>Monitoring dashboards that keep performance and equity in view.</li>
+    </ul>
+  </div>
+</div>
 
 {% include section.html %}
 
-<!-- ## More -->
+<div class="card-stack">
+  <div class="card-tile">
+    <h3>Deployment ready</h3>
+    <p>Built with governance, quality, and IT partners to meet Penn Medicine standards.</p>
+  </div>
+  <div class="card-tile">
+    <h3>Human-centered</h3>
+    <p>Interfaces and alerts designed with clinician feedback to improve adoption and trust.</p>
+  </div>
+  <div class="card-tile">
+    <h3>Measurable impact</h3>
+    <p>Each initiative tracks clear clinical, operational, or educational outcomes.</p>
+  </div>
+</div>
+
+{% include section.html %}
+
+## Active projects
 
 {% include list.html component="card" data="projects" style="small" %}
