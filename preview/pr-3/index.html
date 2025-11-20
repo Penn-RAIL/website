@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" data-dark="false">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--
+  put your analytics (e.g. Google Analytics) tracking code here
+-->
+
+  <!--
+  put your search engine verification (e.g. Google Search Console) tag here
+-->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Radiology AI Implementation Lab</title>
+
+<link rel="icon" href="/website/preview/pr-3/images/logo.png">
+
+<meta name="title" content="">
+<meta name="description" content="University of Pennsylvania. The Radiology AI Implementation Lab (RAIL) at the Perelman School of Medicine, led by Dr. Tessa Cook, is dedicated to advancing the real-world integration of artificial intelligence into radiology. Our work spans clinical workflow optimization, innovative medical education, and AI-driven tools to enhance patient-centered care.">
+
+<meta property="og:title" content="">
+<meta property="og:site_title" content="Radiology AI Implementation Lab">
+<meta property="og:description" content="University of Pennsylvania. The Radiology AI Implementation Lab (RAIL) at the Perelman School of Medicine, led by Dr. Tessa Cook, is dedicated to advancing the real-world integration of artificial intelligence into radiology. Our work spans clinical workflow optimization, innovative medical education, and AI-driven tools to enhance patient-centered care.">
+<meta property="og:url" content="/website/preview/pr-3">
+<meta property="og:image" content="/website/preview/pr-3/images/share.jpg">
+<meta property="og:locale" content="en_US">
+
+<meta property="twitter:title" content="">
+<meta property="twitter:description" content="University of Pennsylvania. The Radiology AI Implementation Lab (RAIL) at the Perelman School of Medicine, led by Dr. Tessa Cook, is dedicated to advancing the real-world integration of artificial intelligence into radiology. Our work spans clinical workflow optimization, innovative medical education, and AI-driven tools to enhance patient-centered care.">
+<meta property="twitter:url" content="/website/preview/pr-3">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="/website/preview/pr-3/images/share.jpg">
+
+
+  <meta property="og:type" content="website">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "WebSite",
+    
+    "name": "",
+    "description": "University of Pennsylvania. The Radiology AI Implementation Lab (RAIL) at the Perelman School of Medicine, led by Dr. Tessa Cook, is dedicated to advancing the real-world integration of artificial intelligence into radiology. Our work spans clinical workflow optimization, innovative medical education, and AI-driven tools to enhance patient-centered care.",
+    "headline": "",
+    "publisher": {
+      "@type": "Organization",
+      "logo": { "@type": "ImageObject", "url": "/website/preview/pr-3/images/logo.png" }
+    },
+    "url": "/website/preview/pr-3"
+  }
+</script>
+
+<link rel="alternate" type="application/rss+xml" href="/website/preview/pr-3/feed.xml">
+
+  <!-- Google Fonts -->
+<!-- automatically get url from fonts used in theme file -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+
+<!-- Font Awesome icons (load asynchronously due to size) -->
+
+<link href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" rel="stylesheet" media="none" onload="this.removeAttribute('media'); this.onload = null;">
+<noscript>
+  <link href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" rel="stylesheet">
+</noscript>
+
+  <!-- third party styles -->
+<!-- https://stylishthemes.github.io/Syntax-Themes/pygments/ -->
+<link href="https://cdn.jsdelivr.net/gh/StylishThemes/Syntax-Themes/pygments/css-github/pygments-tomorrow-night-eighties.css" rel="stylesheet">
+
+<!-- include all sass in styles folder -->
+
+
+  
+    <link href="/website/preview/pr-3/_styles/-theme.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/alert.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/all.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/anchor.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/background.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/body.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/bold.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/button.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/card.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/checkbox.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/citation.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/code.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/cols.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/dark-toggle.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/details.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/feature.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/figure.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/float.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/font.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/footer.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/form.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/grid.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/header.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/heading.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/highlight.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/home.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/icon.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/image.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/link.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/list.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/page-refresh.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/paragraph.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/portrait.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/post-excerpt.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/post-info.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/post-nav.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/quote.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/rule.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/search-box.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/search-info.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/section.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/table.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/tags.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/textbox.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/tooltip.css" rel="stylesheet">
+  
+
+  
+    <link href="/website/preview/pr-3/_styles/util.css" rel="stylesheet">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<!-- include all css in styles folder -->
+
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+</head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="background" style="--image: url('/website/preview/pr-3/images/background.jpg')" data-dark="true" data-big>
+  <a href="/website/preview/pr-3/" class="home">
+    
+      
+      
+      
+      
+      
+      <span class="logo">
+        
+          <img src="/website/preview/pr-3/images/logo-big.png" alt="logo">
+        
+      </span>
+    
+    <!-- 
+      <span class="title-text" data-tooltip="Home">
+        
+          <span class="title">Radiology AI Implementation Lab</span>
+        
+         
+          <span class="subtitle">University of Pennsylvania</span>
+         -->
+      
+    <!--  -->
+  </a>
+
+  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
+
+  <nav>
+    
+    
+      
+        <a href="/website/preview/pr-3/research/" data-tooltip="Published works">
+          Research
+        </a>
+      
+    
+      
+        <a href="/website/preview/pr-3/projects/" data-tooltip="Software, datasets, and more">
+          Projects
+        </a>
+      
+    
+      
+        <a href="/website/preview/pr-3/team/" data-tooltip="About our team">
+          Team
+        </a>
+      
+    
+      
+        <a href="/website/preview/pr-3/blog/" data-tooltip="Musings and miscellany">
+          Blog
+        </a>
+      
+    
+      
+        <a href="/website/preview/pr-3/contact/" data-tooltip="Email, address, and location">
+          Contact
+        </a>
+      
+    
+      
+        <a href="/website/preview/pr-3/socials/" data-tooltip="Social Images">
+          Social
+        </a>
+      
+    
+  </nav>
+</header>
+
+    <main>
+      <!--
+  modify main content of page:
+  - add section breaks
+  - attach section properties
+  - filter out blank sections
+-->
+
+
+
+
+
+
+  
+  
+  
+
+  <section class="background" data-size="page">
+    <div class="page-hero home-hero shell">
+  <span class="accent-orb"></span>
+  <span class="accent-orb" data-blue=""></span>
+  <div class="hero-content">
+    <p class="eyebrow">Radiology AI Implementation Lab · Penn Medicine</p>
+    <h1 class="reveal">Advancing trustworthy clinical AI from Penn Radiology</h1>
+    <p class="lead reveal" data-delay="1">
+      RAIL translates rigorously validated algorithms into workflows that fit how clinicians care for patients. We design,
+      evaluate, and deploy AI that is transparent, equitable, and centered on real-world radiology needs.
+    </p>
+    <div class="hero-actions">
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/website/preview/pr-3/projects" data-style="" aria-label="fa-solid fa-diagram-project">
+      <i class="icon fa-solid fa-diagram-project"></i>
+      
+        <span>Explore active builds</span>
+      
+    </a>
+  </div>
+
+
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/website/preview/pr-3/research" data-style="bare" aria-label="fa-solid fa-book-open">
+      <i class="icon fa-solid fa-book-open"></i>
+      
+        <span>Read our latest research</span>
+      
+    </a>
+  </div>
+
+
+    </div>
+    <div class="hero-meta">
+      <div class="stat-card" style="animation-delay: 0.05s;">
+        <strong>Implementation science</strong>
+        Production-minded validation, monitoring, and workflow fit for every tool we ship.
+      </div>
+      <div class="stat-card" style="animation-delay: 0.15s;">
+        <strong>Clinician partnership</strong>
+        Close collaboration with radiologists, technologists, and trainees across Penn Medicine.
+      </div>
+      <div class="stat-card" style="animation-delay: 0.25s;">
+        <strong>Equity &amp; safety</strong>
+        Built-in guardrails, bias review, and education to keep patients at the center.
+      </div>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <h3>Built on UPenn values</h3>
+    <p>We pair research excellence with operational discipline to launch AI that clinicians trust.</p>
+    <div class="signal-bar" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <ul>
+      <li>Co-design with clinical teams for adoption and safety.</li>
+      <li>Transparent documentation and open communication.</li>
+      <li>Human-first experiences that respect patient dignity.</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  
+  
+  
+
+  <section class="background" data-size="page">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
+
+<div class="shell">
+  <div class="pillar-grid">
+    <div class="pillar-card reveal">
+      <h3>Workflow integration</h3>
+      <p>From PACS to reading rooms, our deployments are tuned for reliability, observability, and audit trails.</p>
+    </div>
+    <div class="pillar-card reveal" data-delay="1">
+      <h3>Scholarly rigor</h3>
+      <p>Peer-reviewed studies, annotated datasets, and reproducible code reinforce each project we advance.</p>
+    </div>
+    <div class="pillar-card reveal" data-delay="2">
+      <h3>People-centered design</h3>
+      <p>Education, feedback loops, and transparent communication ensure clinicians and patients stay informed.</p>
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <h2>Impact in motion</h2>
+    <p class="section-note">See how our team pairs science, engineering, and human factors.</p>
+  </div>
+  <div class="highlight-tiles">
+    <div class="highlight-tile reveal">
+      <h3>Research that informs practice</h3>
+      <p>Explainability, fairness, and calibration studies guide how we steward AI responsibly.</p>
+      <p class="tagline">Explore publications and talks</p>
+      <div class="image-chip">
+        <img src="/website/preview/pr-3/images/researchStock.jpg" alt="Researchers reviewing radiology AI outputs">
+      </div>
+    </div>
+    <div class="highlight-tile reveal" data-delay="1">
+      <h3>Products clinicians adopt</h3>
+      <p>We build decision support, triage, and education tools that plug into Penn Medicine workflows.</p>
+      <p class="tagline">View our active projects</p>
+      <div class="image-chip">
+        <img src="/website/preview/pr-3/images/projectStock.jpeg" alt="Radiology imaging dashboard">
+      </div>
+    </div>
+    <div class="highlight-tile reveal" data-delay="2">
+      <h3>People who lead the field</h3>
+      <p>Multidisciplinary faculty, trainees, and engineers teaching and mentoring across the system.</p>
+      <p class="tagline">Meet the RAIL team</p>
+      <div class="image-chip">
+        <img src="/website/preview/pr-3/images/teamStock.jpg" alt="Team collaborating in a meeting room">
+      </div>
+    </div>
+  </div>
+
+  <div class="equity-band">
+    <div class="equity-card">
+      <h4>Education &amp; outreach</h4>
+      <p>Hands-on training for radiologists and residents on AI literacy, risks, and use.</p>
+    </div>
+    <div class="equity-card">
+      <h4>Monitoring in production</h4>
+      <p>Performance drift, bias checks, and uptime reviews keep patients and clinicians protected.</p>
+    </div>
+    <div class="equity-card">
+      <h4>Partnerships that scale</h4>
+      <p>We collaborate with Penn Medicine IT, compliance, and quality teams to deploy responsibly.</p>
+    </div>
+  </div>
+
+  <div class="card-stack">
+    <div class="card-tile reveal">
+      <h3>Our research</h3>
+      <p>Publications, presentations, and open-source releases from the RAIL group.</p>
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/website/preview/pr-3/research" data-style="bare" aria-label="fa-solid fa-arrow-right">
+      <i class="icon fa-solid fa-arrow-right"></i>
+      
+        <span>Browse research</span>
+      
+    </a>
+  </div>
+
+
+    </div>
+    <div class="card-tile reveal" data-delay="1">
+      <h3>Projects in progress</h3>
+      <p>Clinical AI implementations, datasets, and educational tools under active development.</p>
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/website/preview/pr-3/projects" data-style="bare" aria-label="fa-solid fa-diagram-project">
+      <i class="icon fa-solid fa-diagram-project"></i>
+      
+        <span>See projects</span>
+      
+    </a>
+  </div>
+
+
+    </div>
+    <div class="card-tile reveal" data-delay="2">
+      <h3>Connect with us</h3>
+      <p>Collaborate, co-author, or pilot a clinical AI idea with the RAIL team at Penn Medicine.</p>
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="/website/preview/pr-3/contact" data-style="bare" aria-label="fa-solid fa-envelope">
+      <i class="icon fa-solid fa-envelope"></i>
+      
+        <span>Get in touch</span>
+      
+    </a>
+  </div>
+
+
+    </div>
+  </div>
+</div>
+  </section>
+
+
+    </main>
+    
+
+
+<footer class="background" style="--image: url('/website/preview/pr-3/images/background.jpg')" data-dark="true" data-size="wide">
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="/website/preview/pr-3/images/upenn-logo.svg" alt="University of Pennsylvania" class="footer-logo">
+      <div>
+        <p class="footer-title">Radiology AI Implementation Lab</p>
+        <p class="footer-subtitle">Department of Radiology · University of Pennsylvania</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="mailto:satvik.tripathi@pennmedicine.upen.edu" data-tooltip="Email" data-style="bare" aria-label="Email">
+      <i class="icon fa-solid fa-envelope"></i>
+      
+    </a>
+  </div>
+
+
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://github.com/PennRad-Ghost-lab" data-tooltip="GitHub" data-style="bare" aria-label="GitHub">
+      <i class="icon fa-brands fa-github"></i>
+      
+    </a>
+  </div>
+
+
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://twitter.com/PennRad-Ghost-lab" data-tooltip="Twitter" data-style="bare" aria-label="Twitter">
+      <i class="icon fa-brands fa-twitter"></i>
+      
+    </a>
+  </div>
+
+
+      
+    </div>
+
+    <div class="footer-meta">
+      <span>© 2025 Radiology AI Implementation Lab</span>
+      <span class="footer-template">
+        Built with
+        <a href="https://github.com/greenelab/lab-website-template">
+          Lab Website Template
+        </a>
+      </span>
+    </div>
+
+    <label class="footer-toggle">
+      <input type="checkbox" class="dark-toggle" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      <span>Dark mode</span>
+    </label>
+  </div>
+</footer>
+
+    <!-- third party scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2" defer></script>
+<script src="https://unpkg.com/tippy.js@6" defer></script>
+<script src="https://unpkg.com/mark.js@8" defer></script>
+
+<!-- include all js in scripts folder -->
+
+
+  <script src="/website/preview/pr-3/_scripts/anchors.js"></script>
+
+  <script src="/website/preview/pr-3/_scripts/dark-mode.js"></script>
+
+  <script src="/website/preview/pr-3/_scripts/fetch-tags.js"></script>
+
+  <script src="/website/preview/pr-3/_scripts/search.js"></script>
+
+  <script src="/website/preview/pr-3/_scripts/site-search.js"></script>
+
+  <script src="/website/preview/pr-3/_scripts/table-wrap.js"></script>
+
+  <script src="/website/preview/pr-3/_scripts/tooltip.js"></script>
+
+
+  </body>
+</html>
