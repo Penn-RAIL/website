@@ -12,6 +12,8 @@
   --gray: #7c869f;
   --dark-gray: #3a4560;
   --overlay: #0d183820;
+  --glass: rgba(255, 255, 255, 0.7);
+  --grid-line: rgba(1, 31, 91, 0.12);
 }
 [data-dark="true"] {
   --primary: #4d6aa6;
@@ -23,6 +25,8 @@
   --gray: #8f99b5;
   --dark-gray: #cbd4eb;
   --overlay: #e8ecf710;
+  --glass: rgba(17, 24, 51, 0.7);
+  --grid-line: rgba(203, 212, 235, 0.12);
 }
 
 :root {
@@ -51,4 +55,8 @@
   --rounded: 3px;
   --shadow: 0 0 10px 0 var(--overlay);
   --transition: 0.2s ease;
+  --panel: linear-gradient(135deg, rgba(1, 31, 91, 0.08), rgba(153, 0, 0, 0.08));
+  --beam: radial-gradient(circle at 30% 30%, rgba(1, 31, 91, 0.1), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(153, 0, 0, 0.14), transparent 35%);
+  --grid: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
 }

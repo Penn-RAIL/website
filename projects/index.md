@@ -5,11 +5,11 @@ nav:
   tooltip: Software, datasets, and more
 ---
 
-<div class="page-hero">
+<div class="page-hero shell">
   <div class="hero-content">
     <p class="eyebrow">Penn Radiology · Projects</p>
-    <h1>Clinical AI built for deployment</h1>
-    <p class="lead">
+    <h1 class="reveal">Clinical AI built for deployment</h1>
+    <p class="lead reveal" data-delay="1">
       We design, test, and scale solutions that improve radiology workflows across Penn Medicine. Each build balances patient
       safety, clinician usability, and measurable impact.
     </p>
@@ -30,18 +30,20 @@ nav:
 
 {% include section.html %}
 
-<div class="card-stack">
-  <div class="card-tile">
-    <h3>Deployment ready</h3>
-    <p>Built with governance, quality, and IT partners to meet Penn Medicine standards.</p>
-  </div>
-  <div class="card-tile">
-    <h3>Human-centered</h3>
-    <p>Interfaces and alerts designed with clinician feedback to improve adoption and trust.</p>
-  </div>
-  <div class="card-tile">
-    <h3>Measurable impact</h3>
-    <p>Each initiative tracks clear clinical, operational, or educational outcomes.</p>
+<div class="shell">
+  <div class="card-stack">
+    <div class="card-tile reveal">
+      <h3>Deployment ready</h3>
+      <p>Built with governance, quality, and IT partners to meet Penn Medicine standards.</p>
+    </div>
+    <div class="card-tile reveal" data-delay="1">
+      <h3>Human-centered</h3>
+      <p>Interfaces and alerts designed with clinician feedback to improve adoption and trust.</p>
+    </div>
+    <div class="card-tile reveal" data-delay="2">
+      <h3>Measurable impact</h3>
+      <p>Each initiative tracks clear clinical, operational, or educational outcomes.</p>
+    </div>
   </div>
 </div>
 

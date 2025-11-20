@@ -5,11 +5,13 @@ nav:
   tooltip: Musings and miscellany
 ---
 
-<div class="page-hero">
+<div class="page-hero shell">
   <div class="hero-content">
     <p class="eyebrow">Penn Radiology · Updates</p>
-    <h1>Stories from the RAIL team</h1>
-    <p class="lead">Insights on implementation, lessons from deployments, and reflections from Penn clinicians and engineers.</p>
+    <h1 class="reveal">Stories from the RAIL team</h1>
+    <p class="lead reveal" data-delay="1">
+      Insights on implementation, lessons from deployments, and reflections from Penn clinicians and engineers.
+    </p>
   </div>
   <div class="hero-panel">
     <h3>Coming soon</h3>
@@ -24,7 +26,9 @@ nav:
 
 {% include section.html %}
 
-<div class="callout">
-  <strong>Want to hear from us first?</strong> Get in touch to discuss speaking engagements, workshops, or research spotlights.
-  {% include button.html link="contact" text="Contact the team" icon="fa-solid fa-envelope" style="bare" %}
+<div class="shell">
+  <div class="callout">
+    <strong>Want to hear from us first?</strong> Get in touch to discuss speaking engagements, workshops, or research spotlights.
+    {% include button.html link="contact" text="Contact the team" icon="fa-solid fa-envelope" style="bare" %}
+  </div>
 </div>
