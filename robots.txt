@@ -1,1 +1,1 @@
-Sitemap: https://penn-rail.github.io/rail-lab-website/sitemap.xml
+Sitemap: https://penn-rail.github.io/website/sitemap.xml
