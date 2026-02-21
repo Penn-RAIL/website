@@ -1,7 +1,7 @@
 ---
 ---
 
-$two: 750px;
+$two: 768px;
 $one: 500px;
 
 .grid {
@@ -10,8 +10,8 @@ $one: 500px;
   grid-template-columns: repeat(var(--repeat), 1fr);
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  margin: 40px 0;
+  gap: 32px;
+  margin: 32px 0;
 }
 
 .grid > * {

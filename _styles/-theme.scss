@@ -5,58 +5,61 @@
 [data-dark="false"] {
   --primary: #011f5b; // Penn blue
   --secondary: #990000; // Penn red
-  --text: #0d1838;
-  --background: #f6f7fb;
-  --background-alt: #ffffff;
-  --light-gray: #d7dce7;
-  --gray: #7c869f;
-  --dark-gray: #3a4560;
-  --overlay: #0d183820;
-  --glass: rgba(255, 255, 255, 0.7);
-  --grid-line: rgba(1, 31, 91, 0.12);
+  --accent: #c59217; // Penn gold accent
+  --text: #3d3d3d;
+  --background: #ffffff;
+  --background-alt: #f8f9fb;
+  --light-gray: #e0e4ea;
+  --gray: #888888;
+  --dark-gray: #555555;
+  --overlay: #0d183815;
+  --glass: rgba(255, 255, 255, 0.85);
+  --grid-line: rgba(1, 31, 91, 0.06);
+  --border: #e8e8e8;
 }
 [data-dark="true"] {
-  --primary: #4d6aa6;
+  --primary: #6b8fd4;
   --secondary: #d86161;
-  --text: #e8ecf7;
-  --background: #0b1026;
-  --background-alt: #111833;
+  --accent: #e8b832;
+  --text: #e2e6f0;
+  --background: #0e1424;
+  --background-alt: #151d33;
   --light-gray: #2b3250;
   --gray: #8f99b5;
   --dark-gray: #cbd4eb;
   --overlay: #e8ecf710;
-  --glass: rgba(17, 24, 51, 0.7);
-  --grid-line: rgba(203, 212, 235, 0.12);
+  --glass: rgba(17, 24, 51, 0.85);
+  --grid-line: rgba(203, 212, 235, 0.06);
+  --border: #2b3250;
 }
 
 :root {
   // font families
-  --title: "Barlow", sans-serif;
-  --heading: "Barlow", sans-serif;
-  --body: "Barlow", sans-serif;
+  --title: "Raleway", sans-serif;
+  --heading: "Oswald", sans-serif;
+  --body: "Roboto", sans-serif;
   --code: "Roboto Mono", monospace;
 
   // font sizes
-  --large: 1.2rem;
-  --xl: 1.4rem;
+  --large: 1.15rem;
+  --xl: 1.35rem;
   --xxl: 1.6rem;
 
   // font weights
-  --thin: 200;
+  --thin: 300;
   --regular: 400;
   --semi-bold: 500;
-  --bold: 600;
+  --bold: 700;
 
   // text line spacing
-  --spacing: 2;
-  --compact: 1.5;
+  --spacing: 1.8;
+  --compact: 1.55;
 
   // effects
-  --rounded: 3px;
-  --shadow: 0 0 10px 0 var(--overlay);
-  --transition: 0.2s ease;
-  --panel: linear-gradient(135deg, rgba(1, 31, 91, 0.08), rgba(153, 0, 0, 0.08));
-  --beam: radial-gradient(circle at 30% 30%, rgba(1, 31, 91, 0.1), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(153, 0, 0, 0.14), transparent 35%);
-  --grid: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  --rounded: 6px;
+  --shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+  --transition: 0.25s ease;
+  --panel: linear-gradient(135deg, rgba(1, 31, 91, 0.04), rgba(153, 0, 0, 0.03));
+  --beam: none;
+  --grid: none;
 }

@@ -35,6 +35,9 @@ $wrap: 800px;
   text-align: center;
   font-family: var(--heading);
   font-weight: var(--semi-bold);
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .feature[data-flip] {
