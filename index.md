@@ -47,21 +47,6 @@
 {% include section.html %}
 
 <div class="shell">
-  <div class="pillar-grid">
-    <div class="pillar-card reveal">
-      <h3>Workflow integration</h3>
-      <p>From PACS to reading rooms, our deployments are tuned for reliability, observability, and audit trails.</p>
-    </div>
-    <div class="pillar-card reveal" data-delay="1">
-      <h3>Scholarly rigor</h3>
-      <p>Peer-reviewed studies, annotated datasets, and reproducible code reinforce each project we advance.</p>
-    </div>
-    <div class="pillar-card reveal" data-delay="2">
-      <h3>People-centered design</h3>
-      <p>Education, feedback loops, and transparent communication ensure clinicians and patients stay informed.</p>
-    </div>
-  </div>
-
   <div class="section-heading">
     <h2>Impact in motion</h2>
     <p class="section-note">See how our team pairs science, engineering, and human factors.</p>
@@ -105,24 +90,6 @@
     <div class="equity-card">
       <h4>Partnerships that scale</h4>
       <p>We collaborate with Penn Medicine IT, compliance, and quality teams to deploy responsibly.</p>
-    </div>
-  </div>
-
-  <div class="card-stack">
-    <div class="card-tile reveal">
-      <h3>Our research</h3>
-      <p>Publications, presentations, and open-source releases from the RAIL group.</p>
-      {% include button.html link="research" text="Browse research" icon="fa-solid fa-arrow-right" style="bare" %}
-    </div>
-    <div class="card-tile reveal" data-delay="1">
-      <h3>Projects in progress</h3>
-      <p>Clinical AI implementations, datasets, and educational tools under active development.</p>
-      {% include button.html link="projects" text="See projects" icon="fa-solid fa-diagram-project" style="bare" %}
-    </div>
-    <div class="card-tile reveal" data-delay="2">
-      <h3>Connect with us</h3>
-      <p>Collaborate, co-author, or pilot a clinical AI idea with the RAIL team at Penn Medicine.</p>
-      {% include button.html link="contact" text="Get in touch" icon="fa-solid fa-envelope" style="bare" %}
     </div>
   </div>
 </div>

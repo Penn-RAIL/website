@@ -5,10 +5,12 @@ footer {
   position: relative;
   padding: 0;
   color: #e0e4ea;
+  background: #262626;
+  width: 100%;
 }
 
 footer.background {
-  background: none;
+  background: #262626;
 }
 
 footer.background:before {
@@ -23,7 +25,6 @@ footer.background:before {
   gap: 24px 40px;
   align-items: center;
   padding: 40px 32px 32px;
-  background: #262626;
 }
 
 .footer-branding {

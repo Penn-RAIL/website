@@ -5,27 +5,9 @@ nav:
   tooltip: Software, datasets, and more
 ---
 
-<div class="page-hero shell">
-  <div class="hero-content">
-    <p class="eyebrow">Penn Radiology · Projects</p>
-    <h1 class="reveal">Clinical AI built for deployment</h1>
-    <p class="lead reveal" data-delay="1">
-      We design, test, and scale solutions that improve radiology workflows across Penn Medicine. Each build balances patient
-      safety, clinician usability, and measurable impact.
-    </p>
-    <div class="hero-actions">
-      {% include button.html link="contact" text="Collaborate with us" icon="fa-solid fa-handshake" %}
-      {% include button.html link="research" text="See the science" icon="fa-solid fa-book-open" style="bare" %}
-    </div>
-  </div>
-  <div class="hero-panel">
-    <h3>What we deliver</h3>
-    <ul>
-      <li>Decision support and triage systems validated with radiologists.</li>
-      <li>Educational tools that help clinicians and patients understand AI.</li>
-      <li>Monitoring dashboards that keep performance and equity in view.</li>
-    </ul>
-  </div>
+<div class="page-title shell">
+  <h1>Projects</h1>
+  <p>Clinical AI tools we design, test, and scale across Penn Medicine.</p>
 </div>
 
 {% include section.html %}

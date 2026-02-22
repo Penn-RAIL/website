@@ -5,6 +5,11 @@
   display: contents;
 }
 
+/* Center the portrait grid within its section */
+section:has(.portrait) {
+  text-align: center;
+}
+
 .portrait {
   position: relative;
   display: inline-flex;

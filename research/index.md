@@ -5,29 +5,9 @@ nav:
   tooltip: Published works
 ---
 
-<div class="page-hero shell">
-  <div class="hero-content">
-    <p class="eyebrow">Penn Radiology · Research</p>
-    <h1 class="reveal">Evidence that strengthens clinical AI</h1>
-    <p class="lead reveal" data-delay="1">
-      Our scholarship spans clinical validation, fairness, interpretability, and implementation science. We publish to share what
-      works, what does not, and how to responsibly bring AI into radiology practice across Penn Medicine.
-    </p>
-    <div class="hero-actions">
-      {% include button.html link="contact" text="Partner on a study" icon="fa-solid fa-handshake" %}
-      {% include button.html link="projects" text="See related projects" icon="fa-solid fa-diagram-project" style="bare" %}
-    </div>
-  </div>
-  <div class="hero-panel">
-    <h3>Focus areas</h3>
-    <p>We prioritize rigorous, patient-first evidence that is reproducible and transparent.</p>
-    <div class="badge-list">
-      <span><i class="fa-solid fa-microscope"></i> Clinical validation</span>
-      <span><i class="fa-solid fa-scale-balanced"></i> Fairness</span>
-      <span><i class="fa-solid fa-eye"></i> Interpretability</span>
-      <span><i class="fa-solid fa-shield-heart"></i> Safety</span>
-    </div>
-  </div>
+<div class="page-title shell">
+  <h1>Research</h1>
+  <p>Our scholarship spans clinical validation, fairness, interpretability, and implementation science.</p>
 </div>
 
 {% include section.html %}

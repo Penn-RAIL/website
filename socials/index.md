@@ -5,23 +5,9 @@ nav:
   tooltip: Social Images
 ---
 
-<div class="page-hero shell">
-  <div class="hero-content">
-    <p class="eyebrow">Penn Radiology · Community</p>
-    <h1 class="reveal">Moments from the RAIL team</h1>
-    <p class="lead reveal" data-delay="1">Explore photos from talks, milestones, and gatherings across Penn Medicine.</p>
-    <div class="hero-actions">
-      {% include button.html link="contact" text="Invite us to speak" icon="fa-solid fa-microphone" %}
-    </div>
-  </div>
-  <div class="hero-panel">
-    <h3>Highlights</h3>
-    <ul>
-      <li>Conference presentations and awards.</li>
-      <li>Team celebrations and community events.</li>
-      <li>Teaching moments with residents and students.</li>
-    </ul>
-  </div>
+<div class="page-title shell">
+  <h1>Social</h1>
+  <p>Moments from talks, milestones, and gatherings across Penn Medicine.</p>
 </div>
 
 {% include section.html %}
