@@ -44,7 +44,6 @@ $wrap: 1200px;
 
 .highlight-tile {
   position: relative;
-  padding: 28px 24px;
   border-radius: var(--rounded);
   background: var(--background-alt);
   border: 1px solid var(--border);
@@ -52,6 +51,12 @@ $wrap: 1200px;
   overflow: hidden;
   text-align: left;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-tile > div {
+  padding: 28px 24px 0;
 }
 
 .highlight-tile:hover {
@@ -64,12 +69,14 @@ $wrap: 1200px;
   font-family: var(--heading);
   font-size: 1.2rem;
   color: var(--primary);
+  padding: 28px 24px 0;
 }
 
-.highlight-tile p {
+.highlight-tile p:not(.tagline) {
   margin: 0;
   color: var(--dark-gray);
   line-height: 1.7;
+  padding: 0 24px;
 }
 
 .highlight-tile .tagline {
@@ -79,18 +86,16 @@ $wrap: 1200px;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  padding: 0 24px 28px;
 }
 
 .highlight-tile .image-chip {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  width: 110px;
-  height: 80px;
-  border-radius: var(--rounded);
+  width: 100%;
+  height: 200px;
   overflow: hidden;
-  opacity: 0.85;
-  box-shadow: var(--shadow);
+  opacity: 1;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
 }
 
 .highlight-tile img {
