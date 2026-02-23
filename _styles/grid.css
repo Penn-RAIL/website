@@ -4,8 +4,8 @@
   grid-template-columns: repeat(var(--repeat), 1fr);
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  margin: 40px 0;
+  gap: 32px;
+  margin: 32px 0;
 }
 
 .grid > * {
@@ -15,7 +15,7 @@
   margin: 0 !important;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .grid {
     --repeat: 2;
   }

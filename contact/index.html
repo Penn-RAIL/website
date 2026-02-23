@@ -87,10 +87,9 @@
 <link rel="alternate" type="application/rss+xml" href="https://penn-rail.github.io/website/feed.xml">
 
   <!-- Google Fonts -->
-<!-- automatically get url from fonts used in theme file -->
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,800&amp;family=Oswald:wght@400;500;600&amp;family=Roboto:wght@300;400;500;700&amp;family=Roboto+Mono:wght@400&amp;display=swap" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -355,6 +354,7 @@
 
 
 
+  <link rel="icon" type="image/x-icon" href="/website/favicon.ico">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 
@@ -455,54 +455,9 @@
   
 
   <section class="background" data-size="page">
-    <div class="page-hero shell">
-  <div class="hero-content">
-    <p class="eyebrow">Connect with RAIL</p>
-    <h1 class="reveal">We'd love to collaborate</h1>
-    <p class="lead reveal" data-delay="1">
-      Reach out to explore research partnerships, clinical pilots, or educational programming. RAIL is based in the Department
-      of Radiology at the Perelman School of Medicine, University of Pennsylvania.
-    </p>
-    <div class="hero-actions">
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="mailto:satvik.tripathi@pennmedicine.upenn.edu" data-tooltip="Email" data-style="" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-        <span>satvik.tripathi@pennmedicine.upenn.edu</span>
-      
-    </a>
-  </div>
-
-
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://www.google.com/maps/place/Perelman+School+of+Medicine+at+the+University+of+Pennsylvania/@39.9476279,-75.1951729,16z" data-style="bare" aria-label="fa-solid fa-location-dot">
-      <i class="icon fa-solid fa-location-dot"></i>
-      
-        <span>Find us on maps</span>
-      
-    </a>
-  </div>
-
-
-    </div>
-  </div>
-  <div class="hero-panel">
-    <h3>Response promise</h3>
-    <p>We respond to collaboration requests within a few business days.</p>
-    <div class="badge-list">
-      <span><i class="fa-solid fa-users"></i> Partnerships</span>
-      <span><i class="fa-solid fa-graduation-cap"></i> Education</span>
-      <span><i class="fa-solid fa-stethoscope"></i> Clinical pilots</span>
-    </div>
-  </div>
+    <div class="page-title shell">
+  <h1>Contact</h1>
+  <p>Have questions or want to collaborate? We'd love to hear from you.</p>
 </div>
   </section>
 
@@ -643,12 +598,12 @@
 }
 
 .form-container {
-  width: 100% !important; /* Ensure container takes full width of parent */
+  width: 100% !important;
   padding: 2rem !important;
-  background-color: #f8f9fa !important;
-  border: 1px solid #dee2e6 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+  background-color: var(--background-alt) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06) !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 1.5rem !important;
@@ -659,45 +614,53 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  align-items: flex-start; /* Align items to the left */
-  width: 100%; /* Full width container */
+  align-items: flex-start;
+  width: 100%;
 }
 
 .form-group label {
   display: block;
   margin-bottom: 0.5em;
-  font-weight: 600;
-  color: #343a40;
-  text-align: left; /* Explicitly set left alignment */
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--primary);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
 }
 
 .form-group input.form-control {
-  width: 100% !important; /* Force 50% width with !important */
+  width: 100% !important;
   padding: 12px;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--border);
   border-radius: 6px;
   box-sizing: border-box;
   font-size: 1rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  background-color: white;
+  font-family: var(--body);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--background);
+  color: var(--text);
   height: auto;
 }
 
 .form-control {
   padding: 12px;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--border);
   border-radius: 6px;
   box-sizing: border-box;
   font-size: 1rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  background-color: white;
+  font-family: var(--body);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--background);
+  color: var(--text);
   height: auto;
 }
 
 .form-control:focus {
-  border-color: #4285F4;
+  border-color: var(--primary);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.25);
+  box-shadow: 0 0 0 3px rgba(1, 31, 91, 0.15);
 }
 
 textarea.form-control {
@@ -712,24 +675,28 @@ textarea.form-control {
 }
 
 .submit-button {
-  background-color: #4285F4;
-  color: white;
+  background-color: var(--primary);
+  color: #ffffff;
   padding: 12px 28px;
-  border: none;
+  border: 2px solid var(--primary);
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-family: var(--body);
   font-weight: 500;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Make button full width for better alignment */
-  max-width: 250px; /* But limit its maximum width */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 250px;
 }
 
 .submit-button:hover {
-  background-color: #3367D6;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .submit-button:active {
@@ -737,14 +704,13 @@ textarea.form-control {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .form-container {
-    padding: 1.5rem;
-    gap: 1.2rem;
+    padding: 1.5rem !important;
+    gap: 1.2rem !important;
   }
   .form-group input.form-control {
-    width: 100% !important; /* On mobile, make all inputs full width */
+    width: 100% !important;
   }
 }
 </style>
@@ -846,6 +812,8 @@ textarea.form-control {
   <script src="/website/_scripts/dark-mode.js"></script>
 
   <script src="/website/_scripts/fetch-tags.js"></script>
+
+  <script src="/website/_scripts/header-shrink.js"></script>
 
   <script src="/website/_scripts/search.js"></script>
 

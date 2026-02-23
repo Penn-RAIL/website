@@ -13,33 +13,42 @@ button {
   gap: 10px;
   max-width: calc(100% - 5px - 5px);
   margin: 5px;
-  padding: 8px 15px;
-  border: none;
+  padding: 10px 20px;
+  border: 2px solid var(--primary);
   border-radius: var(--rounded);
   background: var(--primary);
-  color: var(--background);
+  color: #ffffff;
   text-align: center;
   font: inherit;
-  font-family: var(--heading);
+  font-family: var(--body);
   font-weight: var(--semi-bold);
+  font-size: 0.9rem;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   vertical-align: middle;
   appearance: none;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), color var(--transition), border-color var(--transition), transform 0.2s ease;
 }
 
 .button:hover {
-  background: var(--text);
-  color: var(--background);
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .button[data-style=bare] {
-  padding: 5px;
+  padding: 6px 2px;
   background: none;
+  border: none;
   color: var(--primary);
+  text-transform: none;
+  letter-spacing: 0;
 }
 .button[data-style=bare]:hover {
-  color: var(--text);
+  color: var(--secondary);
+  transform: none;
 }
 
 .button[data-flip] {

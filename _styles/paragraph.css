@@ -1,6 +1,6 @@
 p {
-  margin: 20px 0;
-  text-align: justify;
+  margin: 16px 0;
+  text-align: left;
   line-height: var(--spacing);
 }
 

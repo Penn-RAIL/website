@@ -10,7 +10,14 @@
   border-radius: var(--rounded);
   overflow: hidden;
   box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   vertical-align: top;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card[data-style=small] {
@@ -28,7 +35,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   max-width: 100%;
   padding: 20px;
 }
@@ -40,11 +47,13 @@
 .card-title {
   font-family: var(--heading);
   font-weight: var(--semi-bold);
+  color: var(--primary);
 }
 
 .card-subtitle {
-  margin-top: -10px !important;
+  margin-top: -8px !important;
   font-style: italic;
+  color: var(--gray);
 }
 
 /*# sourceMappingURL=card.css.map */
