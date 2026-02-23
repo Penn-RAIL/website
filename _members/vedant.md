@@ -1,6 +1,6 @@
 ---
 name: Vedant Acharya, MD
-image: images/vedant.jpg
+image: images/Vedant.jpg
 role: research assistant
 description: Researcher
 ---

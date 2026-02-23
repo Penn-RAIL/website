@@ -1,6 +1,6 @@
 ---
 name: Azfar Basunia, MD 
-image: images/azfar.jpg
+image: images/Azfar.jpg
 role: research assistant
 description: Researcher
 ---
