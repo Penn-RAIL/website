@@ -1,6 +1,6 @@
 ---
-name: Colin Zhao 
-image: images/colin.jpeg
+name: Jacinta Arnold 
+image: images/jacinta.jpeg
 role: research assistant
 description: Research Assistatnt 
 ---

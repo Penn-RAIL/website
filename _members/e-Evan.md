@@ -1,6 +1,6 @@
 ---
-name: Colin Zhao 
-image: images/colin.jpeg
+name: Evan Ji
+image: images/evan.jpeg
 role: research assistant
 description: Research Assistatnt 
 ---

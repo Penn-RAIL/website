@@ -1,6 +1,6 @@
 ---
-name: Colin Zhao 
-image: images/colin.jpeg
+name: Teddy Kim 
+image: images/teddy.png
 role: research assistant
 description: Research Assistatnt 
 ---
