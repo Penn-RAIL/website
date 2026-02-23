@@ -1,6 +1,6 @@
 ---
 name: Richard Guo
-image: images/colin.jpeg
+image: images/richard.jpeg
 role: research assistant
 description: Research Assistatnt 
 ---
