@@ -1,6 +1,6 @@
 ---
 name: Jacinta Arnold 
-image: images/jacinta.jpeg
+image: images/jacinta.png
 role: research assistant
 description: Research Assistatnt 
 ---
