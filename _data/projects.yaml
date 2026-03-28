@@ -21,11 +21,30 @@
 - title: Chameleon
   subtitle: Repository for Synthetic Radiology Reports
   image: images/chameleon-image.png
-  link: https://pennrad-ghost-lab.github.io/chameleon/
+  link: https://penn-rail.github.io/chameleon/
   description: A curated dataset of high-quality synthetic radiology reports, designed to support research in medical AI.
-  repo: pennrad-ghost-lab/chameleon
+  repo: Penn-RAIL/chameleon
   tags:
     - resource
+
+- title: checkSupport
+  subtitle: Python module that can help with checklists
+  image: images/CS_LOGO.png
+  link: https://github.com/Penn-RAIL/checkSupport
+  description: A command-line tool for suggesting and filling reporting checklists for research manuscripts using local language models via Ollama.
+  repo: Penn-RAIL/checkSupport
+  tags:
+    - resource
+    
+
+- title: MARC-v1
+  subtitle: General purpose framework for multi-agent coordination
+  image: images/Marc.png
+  link: https://github.com/Penn-RAIL/MARC-v1
+  description: A curated dataset of high-quality synthetic radiology reports, designed to support research in medical AI.
+  repo: Penn-RAIL/MARC-v1
+  tags:
+    - resources
 
 # - title: Cool Web App
 #   subtitle: a subtitle
