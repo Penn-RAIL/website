@@ -1,7 +1,7 @@
 ---
 name: Satvik Tripathi
 image: images/satvik.jpeg
-description: Lab Manager
+description: Lab Manager, Doctoral Student
 links:
   home-page: https://satviktri.github.io/ 
   google-scholar: d-8xB2sAAAAJ&hl=en
