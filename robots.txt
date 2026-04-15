@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
+
 Sitemap: https://penn-rail.github.io/website/sitemap.xml
