@@ -1,13 +1,13 @@
 {% assign filename = page.path | split: "/" | last %}
 {% if page.name and page.name != filename %}
-  {% assign title = page.name %}
+  {% assign meta_title_plain = page.name %}
 {% elsif page.title %}
-  {% assign title = page.title %}
+  {% assign meta_title_plain = page.title %}
 {% else %}
-  {% assign title = nil %}
+  {% assign meta_title_plain = nil %}
 {% endif %}
 
-{% assign title = title | xml_escape %}
+{% assign title = meta_title_plain | xml_escape %}
 
 {% assign fulltitle = "" | split: "," %}
 {% if title and title != "" %}
@@ -20,25 +20,26 @@
 
 {% assign subtitle = site.subtitle %}
 
-{% assign description = page.description | default: site.description %}
+{% assign desc_plain = page.description | default: site.description %}
 {% if site.subtitle %}
-  {% capture description -%}
-    {{ site.subtitle }}. {{ description }}
+  {% capture desc_plain -%}
+    {{ site.subtitle }}. {{ page.description | default: site.description }}
   {%- endcapture %}
 {% endif %}
-{% capture url -%}
-  {{ site.url }}{{ site.baseurl }}
-{%- endcapture %}
+{% assign canonical = page.url | absolute_url %}
 
-{% assign description = description | xml_escape %}
+{% assign description_json = desc_plain | strip | jsonify %}
+{% assign description = desc_plain | strip | xml_escape %}
+{% assign title_json = meta_title_plain | default: site.title | strip | jsonify %}
 
 {% assign png = "images/logo.png" | file_exists %}
 {% assign jpg = "images/logo.jpg" | file_exists %}
 {% assign icon = png | default: jpg | relative_url %}
+{% assign icon_abs = png | default: jpg | absolute_url %}
 
 {% assign jpg = "images/share.jpg" | file_exists %}
 {% assign png = "images/share.png" | file_exists %}
-{% assign share = jpg | default: png | relative_url %}
+{% assign share = jpg | default: png | absolute_url %}
 
 {% assign published = page.date | date_to_xmlschema %}
 {% assign updated = page.last_modified_at | date_to_xmlschema %}
@@ -49,21 +50,24 @@
 
 <title>{{ fulltitle }}</title>
 
+<link rel="canonical" href="{{ canonical }}">
+
 <link rel="icon" href="{{ icon }}">
 
 <meta name="title" content="{{ title }}">
 <meta name="description" content="{{ description }}">
 
 <meta property="og:title" content="{{ title }}">
+<meta property="og:site_name" content="{{ site.title | xml_escape }}">
 <meta property="og:site_title" content="{{ site.title | xml_escape }}">
 <meta property="og:description" content="{{ description }}">
-<meta property="og:url" content="{{ url }}">
+<meta property="og:url" content="{{ canonical }}">
 <meta property="og:image" content="{{ share }}">
 <meta property="og:locale" content="en_US">
 
 <meta property="twitter:title" content="{{ title }}">
 <meta property="twitter:description" content="{{ description }}">
-<meta property="twitter:url" content="{{ url }}">
+<meta property="twitter:url" content="{{ canonical }}">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="{{ share }}">
 
@@ -83,20 +87,44 @@
     "@context": "https://schema.org",
     {% if page.author %}
       "@type": "BlogPosting",
-      "author": { "@type": "Person", "name": "{{ title }}" },
-      "datePublished": "{{ published }}",
-      "dateModified": "{{ updated }}",
-    {% else %}
+      "author": { "@type": "Person", "name": {{ title_json }} },
+      "datePublished": {{ published | jsonify }},
+      "dateModified": {{ updated | jsonify }},
+      "headline": {{ title_json }},
+      "name": {{ title_json }},
+      "description": {{ description_json }},
+      "publisher": {
+        "@type": "Organization",
+        "logo": { "@type": "ImageObject", "url": {{ icon_abs | jsonify }} }
+      },
+      "url": {{ canonical | jsonify }}
+    {% elsif page.url == "/" %}
       "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "description": {{ description_json }},
+      "url": {{ canonical | jsonify }},
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }},
+        "url": {{ '/' | absolute_url | jsonify }},
+        "logo": { "@type": "ImageObject", "url": {{ icon_abs | jsonify }} }
+      }
+    {% else %}
+      "@type": "WebPage",
+      "name": {{ title_json }},
+      "description": {{ description_json }},
+      "url": {{ canonical | jsonify }},
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": {{ site.title | jsonify }},
+        "url": {{ '/' | absolute_url | jsonify }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }},
+        "logo": { "@type": "ImageObject", "url": {{ icon_abs | jsonify }} }
+      }
     {% endif %}
-    "name": "{{ title }}",
-    "description": "{{ description }}",
-    "headline": "{{ title }}",
-    "publisher": {
-      "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "{{ icon }}" }
-    },
-    "url": "{{ url }}"
   }
 </script>
 

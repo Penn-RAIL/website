@@ -1,5 +1,6 @@
 ---
 title: Social
+description: Photos and highlights from the Radiology AI Implementation Lab (RAIL)—talks, milestones, and events at Penn Medicine and the University of Pennsylvania.
 nav:
   order: 6
   tooltip: Social Images

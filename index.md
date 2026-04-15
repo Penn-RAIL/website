@@ -1,4 +1,6 @@
 ---
+title: Home
+description: Official site of RAIL (Radiology AI Implementation Lab) at the Perelman School of Medicine—clinical radiology AI research, Penn Medicine projects, publications, and team.
 ---
 
 <div class="page-hero home-hero shell">
@@ -42,6 +44,17 @@
       <li>Human-first experiences that respect patient dignity.</li>
     </ul>
   </div>
+</div>
+
+<div class="shell seo-intro">
+  <p class="lead">
+    The <strong>Radiology AI Implementation Lab</strong> (RAIL) advances radiology AI at the
+    <strong>University of Pennsylvania</strong>. Explore our
+    <a href="{{ '/research/' | relative_url }}">research and publications</a>,
+    <a href="{{ '/projects/' | relative_url }}">clinical AI projects</a>,
+    <a href="{{ '/team/' | relative_url }}">team</a>, and
+    <a href="{{ '/contact/' | relative_url }}">contact</a> the lab.
+  </p>
 </div>
 
 {% include section.html %}

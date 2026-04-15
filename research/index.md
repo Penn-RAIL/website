@@ -1,5 +1,6 @@
 ---
 title: Research
+description: Peer-reviewed radiology AI publications and implementation science from RAIL—fairness, interpretability, clinical validation, and reproducible imaging AI at Penn Medicine.
 nav:
   order: 1
   tooltip: Published works

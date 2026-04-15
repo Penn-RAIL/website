@@ -1,5 +1,6 @@
 ---
 title: Blog
+description: Updates and perspectives from the Radiology AI Implementation Lab—radiology AI, clinical translation, and implementation at the University of Pennsylvania.
 nav:
   order: 4
   tooltip: Musings and miscellany

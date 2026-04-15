@@ -1,5 +1,6 @@
 ---
 title: Contact
+description: Reach the Radiology AI Implementation Lab (RAIL) at Penn Medicine—email, Perelman School of Medicine location, collaborations, and inquiries about radiology AI.
 nav:
   order: 5
   tooltip: Email, address, and location

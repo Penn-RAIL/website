@@ -1,5 +1,6 @@
 ---
 title: Projects
+description: Clinical AI tools, datasets, and software that RAIL designs and scales with Penn Medicine—radiology workflows, decision support, education, and implementation.
 nav:
   order: 2
   tooltip: Software, datasets, and more

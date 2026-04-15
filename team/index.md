@@ -1,5 +1,6 @@
 ---
 title: Team
+description: Faculty, trainees, engineers, and collaborators at the Radiology AI Implementation Lab (RAIL)—University of Pennsylvania Perelman School of Medicine radiology AI team.
 nav:
   order: 3
   tooltip: About our team
