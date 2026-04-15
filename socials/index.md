@@ -73,7 +73,7 @@ nav:
       <figcaption>{{ caption }}</figcaption>                                                                                    
     </figure> 
 
-    <figure class="reveal" data-delay"6">                                                                                                       
+    <figure class="reveal" data-delay="6">                                                                                                       
     {% assign img_src = '/images/AAR2026.jpg' | relative_url %}                                                                 
     {% assign caption = "RAIL presentation at AAR 2026" %}
     <a href="{{ img_src }}" data-lightbox="social-gallery" data-title="{{ caption }}">                                          
