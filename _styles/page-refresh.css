@@ -404,6 +404,14 @@
   animation-delay: 0.48s;
 }
 
+.reveal[data-delay="4"] {
+  animation-delay: 0.6s;
+}
+
+.reveal[data-delay="4"] {
+  animation-delay: 0.72s;
+}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
