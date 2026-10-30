@@ -68,3 +68,15 @@ exclude:
   - README.md
   - LICENSE.md
   - CITATION.cff
+
+  # Private tracker source and build inputs (only compiled UI is served)
+  - tracker/src
+  - tracker/scripts
+  - tracker/schema.sql
+  - tracker/README.md
+  - tracker/package.json
+  - tracker/package-lock.json
+  - tracker/vite.config.mjs
+  - tracker/app.html
+  - tracker/build
+  - tracker/node_modules
