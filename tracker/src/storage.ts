@@ -7,17 +7,38 @@ export const configured=()=>/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(config.s
 export const hasSession=()=>!!session();
 function store(s:any){localStorage.setItem(key,JSON.stringify({access_token:s.access_token,refresh_token:s.refresh_token,expires_at:Date.now()+s.expires_in*1000}));}
 async function auth(path:string,body:any){const r=await fetch(config.supabaseUrl+'/auth/v1/'+path,{method:'POST',headers:{apikey:config.supabaseKey,'Content-Type':'application/json'},body:JSON.stringify(body)});const d:any=await r.json();if(!r.ok)throw Error(d.msg||d.error_description||d.message||'Unable to sign in. Contact the lab administrator.');return d}
+const verifierKey = 'penn-rail-pkce-v1';
+
+function base64Url(bytes: Uint8Array) {
+  return btoa(String.fromCharCode(...bytes)).replaceAll('+','-').replaceAll('/','_').replace(/=+$/, '');
+}
+
 export async function requestAccessLink(name:string,email:string) {
-  await auth('otp',{email:email.trim().toLowerCase(),create_user:true,data:{full_name:name.trim()}});
+  const verifier = base64Url(crypto.getRandomValues(new Uint8Array(48)));
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier));
+  await auth('otp', {
+    email: email.trim().toLowerCase(), create_user: true, data: {full_name: name.trim()},
+    code_challenge: base64Url(new Uint8Array(digest)), code_challenge_method: 's256'
+  });
+  localStorage.setItem(verifierKey, verifier);
 }
+
 export function takeEmailLink() {
-  const params = new URLSearchParams(window.location.hash.slice(1));
-  const hash = params.get('token_hash');
-  if (hash) history.replaceState(null,'',window.location.pathname+window.location.search);
-  return hash;
+  const url = new URL(window.location.href);
+  const code = url.searchParams.get('code');
+  if (code) {
+    url.searchParams.delete('code');
+    history.replaceState(null, '', url.pathname + url.search);
+  }
+  return code;
 }
-export async function completeEmailLink(hash:string) {
-  store(await auth('verify',{type:'email',token_hash:hash}));
+
+export async function completeEmailLink(code:string) {
+  const verifier = localStorage.getItem(verifierKey);
+  if (!verifier) throw Error('Open the newest email link in the browser where you requested it.');
+  const session = await auth('token?grant_type=pkce', {auth_code:code,code_verifier:verifier});
+  store(session);
+  localStorage.removeItem(verifierKey);
 }
 export function signOut(){const s=session();localStorage.removeItem(key);if(s)void fetch(config.supabaseUrl+'/auth/v1/logout',{method:'POST',headers:{apikey:config.supabaseKey,Authorization:'Bearer '+s.access_token}});}
 let refreshing:Promise<void>|null=null;

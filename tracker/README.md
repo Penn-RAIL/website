@@ -6,7 +6,7 @@ The public page contains the interface and the existing lab logo only. It starts
 
 1. Create or select a dedicated Supabase project and apply `schema.sql` once.
 2. Enable email signup and email confirmation. Add approved lab emails to `public.rail_members` through the database administrator. People create their own accounts with their name and email. An account alone cannot read or edit any lab records.
-3. Set the authentication Site URL to `https://penn-rail.github.io/website/tracker/`. In **both Confirm signup and Magic Link email templates**, set the access link to `https://penn-rail.github.io/website/tracker/#token_hash={{ .TokenHash }}`. The page removes the hash from the address bar and asks for a click before exchanging it. This avoids consuming a one-time link during an automated preview.
+3. Set the authentication Site URL to `https://penn-rail.github.io/website/tracker/`. Use the standard confirmation and magic-link templates. Members must open the latest email link in the browser where they requested it. The tracker exchanges the returned code using PKCE. Configure a custom SMTP sender to deliver to lab members outside the Supabase organization.
 4. Fill `config.js` with the project HTTPS URL and **publishable / anon key only**. Never use a service-role key or secret key. The frontend makes no database request until sign-in. Row-level security limits all reads and writes to invited lab members.
 5. Verify with an invited user and a nonmember. Confirm that an anonymous REST request cannot read or write records, an invited user can create and refresh a record, and a nonmember cannot read or write records. Test concurrent edits: the second edit must fail with a refresh prompt.
 
