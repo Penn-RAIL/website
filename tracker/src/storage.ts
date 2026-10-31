@@ -2,14 +2,24 @@ declare global { interface Window {RAIL_CONFIG?:{supabaseUrl:string;supabaseKey:
 const config=window.RAIL_CONFIG||{supabaseUrl:'',supabaseKey:''};
 const key='penn-rail-session-v1';
 type Session={access_token:string;refresh_token:string;expires_at:number};
-function session():Session|null{try{return JSON.parse(sessionStorage.getItem(key)||'null')}catch{return null}}
+function session():Session|null{try{return JSON.parse(localStorage.getItem(key)||'null')}catch{return null}}
 export const configured=()=>/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(config.supabaseUrl)&&!!config.supabaseKey;
 export const hasSession=()=>!!session();
-function store(s:any){sessionStorage.setItem(key,JSON.stringify({access_token:s.access_token,refresh_token:s.refresh_token,expires_at:Date.now()+s.expires_in*1000}));}
+function store(s:any){localStorage.setItem(key,JSON.stringify({access_token:s.access_token,refresh_token:s.refresh_token,expires_at:Date.now()+s.expires_in*1000}));}
 async function auth(path:string,body:any){const r=await fetch(config.supabaseUrl+'/auth/v1/'+path,{method:'POST',headers:{apikey:config.supabaseKey,'Content-Type':'application/json'},body:JSON.stringify(body)});const d:any=await r.json();if(!r.ok)throw Error(d.msg||d.error_description||d.message||'Unable to sign in. Contact the lab administrator.');return d}
-export async function signIn(email:string){await auth('otp',{email:email.trim().toLowerCase(),create_user:false});}
-export async function verifyCode(email:string,token:string){store(await auth('verify',{email:email.trim().toLowerCase(),token:token.trim(),type:'email'}));}
-export function signOut(){const s=session();sessionStorage.removeItem(key);if(s)void fetch(config.supabaseUrl+'/auth/v1/logout',{method:'POST',headers:{apikey:config.supabaseKey,Authorization:'Bearer '+s.access_token}});}
+export async function requestAccessLink(name:string,email:string) {
+  await auth('otp',{email:email.trim().toLowerCase(),create_user:true,data:{full_name:name.trim()}});
+}
+export function takeEmailLink() {
+  const params = new URLSearchParams(window.location.hash.slice(1));
+  const hash = params.get('token_hash');
+  if (hash) history.replaceState(null,'',window.location.pathname+window.location.search);
+  return hash;
+}
+export async function completeEmailLink(hash:string) {
+  store(await auth('verify',{type:'email',token_hash:hash}));
+}
+export function signOut(){const s=session();localStorage.removeItem(key);if(s)void fetch(config.supabaseUrl+'/auth/v1/logout',{method:'POST',headers:{apikey:config.supabaseKey,Authorization:'Bearer '+s.access_token}});}
 let refreshing:Promise<void>|null=null;
 async function token(){let s=session();if(!s)throw Error('Please sign in to continue.');if(Date.now()>s.expires_at-60000){if(!refreshing)refreshing=auth('token?grant_type=refresh_token',{refresh_token:s.refresh_token}).then(store).finally(()=>{refreshing=null});await refreshing;s=session();}return s!.access_token;}
 async function request(path:string,init:RequestInit={}){const r=await fetch(config.supabaseUrl+'/rest/v1/'+path,{...init,headers:{apikey:config.supabaseKey,Authorization:'Bearer '+await token(),'Content-Type':'application/json',Prefer:'return=representation',...init.headers}});if(!r.ok){const d:any=await r.json().catch(()=>({}));throw Error(r.status===401?'Your session expired. Sign out and sign in again.':r.status===403?'You do not have access to this lab workspace.':d.message||'Unable to save. Please try again.');}return r.json() as Promise<any>}
