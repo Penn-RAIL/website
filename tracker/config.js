@@ -1,2 +1,5 @@
-// Public project configuration only. Never put a service-role or secret key here.
-window.RAIL_CONFIG = { supabaseUrl: "", supabaseKey: "" };
+// Public browser configuration. Access is enforced by database policies.
+window.RAIL_CONFIG = {
+  "supabaseUrl": "https://mrzifxhtpwfdvlmplkun.supabase.co",
+  "supabaseKey": "sb_publishable_PGrZV10xjdEBv4N_vXZbcw_C0tfzlWp"
+};
