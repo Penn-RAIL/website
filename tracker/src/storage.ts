@@ -16,7 +16,8 @@ function base64Url(bytes: Uint8Array) {
 export async function requestAccessLink(name:string,email:string) {
   const verifier = base64Url(crypto.getRandomValues(new Uint8Array(48)));
   const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier));
-  await auth('otp', {
+  const redirectTo = new URL('/website/tracker/', window.location.origin).href;
+  await auth('otp?redirect_to=' + encodeURIComponent(redirectTo), {
     email: email.trim().toLowerCase(), create_user: true, data: {full_name: name.trim()},
     code_challenge: base64Url(new Uint8Array(digest)), code_challenge_method: 's256'
   });
